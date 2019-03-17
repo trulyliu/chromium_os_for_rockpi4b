@@ -1,0 +1,2 @@
+# chromium_os_for_rockpi4b
+chromium_os_for_rockpi4b
