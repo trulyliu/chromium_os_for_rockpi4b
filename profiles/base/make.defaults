@@ -13,7 +13,6 @@ USE="${USE} llvm clang"
 
 USE="${USE} hardfp neon"
 USE="${USE} kernel-4_4"
-USE="${USE} -opengl opengles"
 USE="${USE} bluetooth"
 USE="${USE} allow_consumer_kiosk"
 #USE="${USE} -dev"
@@ -49,7 +48,7 @@ USE="${USE} -unibuild"
 USE="${USE} boot_dts_device_tree fbconsole -vboot device_tree include_vmlinuz "
 USE="${USE} -fit_compression_kernel_lz4 -fit_compression_kernel_lzma"
 
-USE="${USE} -opengl opengles"
+#USE="${USE} -opengl opengles"
 # TODO: Re-enable these when the corresponding packages are fixed
 USE="${USE} -tts -nacl"
 
@@ -57,5 +56,7 @@ USE="${USE} gpu_sandbox_failures_not_fatal -gpu_sandbox_start_early"
 
 CHROMEOS_KERNEL_ARCH=arm64
 CHROMEOS_KERNEL_SPLITCONFIG="chromiumos-rockchip64"
-BOARD_COMPILER_FLAGS="-march=armv8-a+crc -mtune=cortex-a57 -ftree-vectorize"
+
+#USE="${USE} -opengl opengles"
+#BOARD_COMPILER_FLAGS="-march=armv8-a+crc -mtune=cortex-a57 -ftree-vectorize"
 
