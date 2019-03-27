@@ -26,7 +26,7 @@ ACCEPT_LICENSE="Google-TOS"
 VIDEO_CARDS="rockchip"
 
 # Allow login on serial console
-TTY_CONSOLE="ttyS2"
+TTY_CONSOLE="ttyFIQ0"
 
 # Allow consumer kiosk.
 # NOTE: Deprecating feature. New board should NOT have it.
@@ -53,6 +53,7 @@ USE="${USE} -opengl opengles"
 # TODO: Re-enable these when the corresponding packages are fixed
 USE="${USE} -tts -nacl"
 
+USE="${USE} gpu_sandbox_failures_not_fatal -gpu_sandbox_start_early"
 
 CHROMEOS_KERNEL_ARCH=arm64
 CHROMEOS_KERNEL_SPLITCONFIG="chromiumos-rockchip64"
