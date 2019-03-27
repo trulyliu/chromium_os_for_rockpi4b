@@ -1,0 +1,21 @@
+From 4c1f52f7a9e6d9b9c45d5b7949c8204f8270ad82 Mon Sep 17 00:00:00 2001
+From: qingchengl <qingchengl@opera.com>
+Date: Tue, 19 Mar 2019 13:10:52 +0800
+Subject: [PATCH] Enable LZ4 kernel image support for rock960-rk3399
+
+---
+ configs/rock960-rk3399_defconfig | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configs/rock960-rk3399_defconfig b/configs/rock960-rk3399_defconfig
+index 17311e685b..b412abbd52 100644
+--- a/configs/rock960-rk3399_defconfig
++++ b/configs/rock960-rk3399_defconfig
+@@ -64,3 +64,4 @@ CONFIG_USB_EHCI_GENERIC=y
+ CONFIG_ROCKCHIP_USB2_PHY=y
+ CONFIG_USE_TINY_PRINTF=y
+ CONFIG_ERRNO_STR=y
++CONFIG_LZ4=y
+-- 
+2.20.1
+

@@ -1,0 +1,60 @@
+# Copyright 2017 The Chromium OS Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# Initial value just for style purposes.
+USE=""
+
+USE="${USE} rockpi4b"
+USE="${USE} pointer_events"
+USE="${USE} passive_event_listeners"
+USE="${USE} internal_stylus"
+USE="${USE} llvm clang"
+
+USE="${USE} hardfp neon"
+USE="${USE} kernel-4_4"
+USE="${USE} -opengl opengles"
+USE="${USE} bluetooth"
+USE="${USE} allow_consumer_kiosk"
+#USE="${USE} -dev"
+
+FEATURES='-collision-protect -protect-owned'
+
+ACCEPT_LICENSE="Google-TOS"
+
+# Turn on the video cards this board uses.
+VIDEO_CARDS="rockchip"
+
+# Allow login on serial console
+TTY_CONSOLE="ttyS2"
+
+# Allow consumer kiosk.
+# NOTE: Deprecating feature. New board should NOT have it.
+USE="${USE} allow_consumer_kiosk"
+
+USE="${USE} -tpm -tpm2 -cr50_onboard"
+
+# Use ext4 crypto
+USE="${USE} direncryption"
+
+INPUT_DEVICES=""
+# Disable unibuild on this legacy board. This is only for existing (as of Jan 2019)
+# boards as all new boards must be unibuild enabled moving forward. Do not copy this
+# to new boards as it will be rejected. See
+# https://chromium.googlesource.com/chromiumos/platform2/+/HEAD/chromeos-config/README.md
+# for further details about chromeos-config, which is the required entry point for
+# unified builds.
+USE="${USE} -unibuild"
+
+USE="${USE} boot_dts_device_tree fbconsole -vboot device_tree include_vmlinuz "
+USE="${USE} -fit_compression_kernel_lz4 -fit_compression_kernel_lzma"
+
+USE="${USE} -opengl opengles"
+# TODO: Re-enable these when the corresponding packages are fixed
+USE="${USE} -tts -nacl"
+
+
+CHROMEOS_KERNEL_ARCH=arm64
+CHROMEOS_KERNEL_SPLITCONFIG="chromiumos-rockchip64"
+BOARD_COMPILER_FLAGS="-march=armv8-a+crc -mtune=cortex-a57 -ftree-vectorize"
+

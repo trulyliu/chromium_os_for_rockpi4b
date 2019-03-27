@@ -1,0 +1,9 @@
+# Copyright 2019 The Chromium OS Authors. All rights reserved.
+# Use of this source code is governed by a BSD-style license that can be
+# found in the LICENSE file.
+
+# Temporarily mask the newer mali drivers packages since they are ARM32 only.
+# https://crbug.com/913088
+>=media-libs/mali-drivers-bin-1.20_p
+>=sys-kernel/chromeos-kernel-4_4-4.4.200_p
+

@@ -1,0 +1,25 @@
+From 701a2f81fe6648808cf9aeed5fe5c320756aca5a Mon Sep 17 00:00:00 2001
+From: trulyliu <trulyliu@gmail.com>
+Date: Tue, 12 Feb 2019 15:15:27 +0800
+Subject: [PATCH] Add rockpi4b overlay
+
+Change-Id: I33662e0bb2dc13ae3743622e9441a6354e22a9f5
+---
+ eclass/cros-board.eclass | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/eclass/cros-board.eclass b/eclass/cros-board.eclass
+index fcae00c3e7c..5786d69942c 100644
+--- a/eclass/cros-board.eclass
++++ b/eclass/cros-board.eclass
+@@ -180,6 +180,7 @@ ALL_BOARDS=(
+ 	kevin
+ 	kevin64
+ 	kevin-arcnext
++	rockpi4b
+ 	#kevin-bertha
+ 	kevin-tpm2
+ 	kidd
+-- 
+2.17.1
+
