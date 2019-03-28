@@ -218,7 +218,7 @@ EOF
     insinto "/boot/extlinux"
     doins "${KBD}/extlinux.conf"
 
-    unlink '{D}'/boot/zImage >/dev/null 2>&1 || true
+    unlink "{D}"/boot/zImage >/dev/null 2>&1 || true
 
     overlay_dtb_install
 }
