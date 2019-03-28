@@ -22,7 +22,7 @@ FEATURES='-collision-protect -protect-owned'
 ACCEPT_LICENSE="Google-TOS"
 
 # Turn on the video cards this board uses.
-VIDEO_CARDS="rockchip"
+VIDEO_CARDS="llvmpipe rockchip"
 
 # Allow login on serial console
 TTY_CONSOLE="ttyFIQ0"
@@ -52,6 +52,9 @@ USE="${USE} -fit_compression_kernel_lz4 -fit_compression_kernel_lzma"
 # TODO: Re-enable these when the corresponding packages are fixed
 USE="${USE} -tts -nacl"
 
+# https://www.chromium.org/chromium-os/how-tos-and-troubleshooting/mainline-kernel-on-kevin-chromebook-plus/chrome-os-mainline-kernel-on-kevin-chromebook-plus
+# Not sure if followings are need for Kernel-4_4
+USE="${USE} llvm_targets_ARM"
 USE="${USE} gpu_sandbox_failures_not_fatal -gpu_sandbox_start_early"
 
 CHROMEOS_KERNEL_ARCH=arm64
