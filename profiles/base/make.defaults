@@ -54,8 +54,8 @@ USE="${USE} -tts -nacl"
 
 # https://www.chromium.org/chromium-os/how-tos-and-troubleshooting/mainline-kernel-on-kevin-chromebook-plus/chrome-os-mainline-kernel-on-kevin-chromebook-plus
 # Not sure if followings are need for Kernel-4_4
-USE="${USE} llvm_targets_ARM"
-USE="${USE} gpu_sandbox_failures_not_fatal -gpu_sandbox_start_early"
+#USE="${USE} llvm_targets_ARM"
+#USE="${USE} gpu_sandbox_failures_not_fatal -gpu_sandbox_start_early"
 
 CHROMEOS_KERNEL_ARCH=arm64
 CHROMEOS_KERNEL_SPLITCONFIG="chromiumos-rockchip64"
