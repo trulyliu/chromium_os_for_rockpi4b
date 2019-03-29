@@ -78,7 +78,7 @@ timeout 20
 label kernel-4.4
     kernel /Image-${version}
     fdt /dts/${dtb}
-    append  earlyprintk=ttyFIQ0,1500000n8 console=ttyFIQ0,1500000n8 rw root=/dev/mmcblk0p3 rootfstype=ext4 iinit=/sbin/init rootwait cros_debug loglevel=7 dm_verity.error_behavior=3 dm_verity.max_bios=-1 dm_verity.dev_wait=0 dm="1 vroot none ro 1,0 2539520 verity payload=/dev/mmcblk0p3 hashtree=HASH_DEV hashstart=2539520 alg=sha1 root_hexdigest=a1910fbe4a24a30d19a49b85d2889776251e54e3 salt=c520b38f1057e5bef0aa64c00cd0d2e50662e22bf19771278921f90a35fd616d" vt.global_cursor_default=0
+    append  earlyprintk=ttyFIQ0,1500000n8 console=ttyFIQ0,1500000n8 rw root=/dev/mmcblk0p3 rootfstype=ext4 init=/sbin/init rootwait cros_debug loglevel=7 dm_verity.error_behavior=3 dm_verity.max_bios=-1 dm_verity.dev_wait=0 dm="1 vroot none ro 1,0 2539520 verity payload=/dev/mmcblk0p3 hashtree=HASH_DEV hashstart=2539520 alg=sha1 root_hexdigest=a1910fbe4a24a30d19a49b85d2889776251e54e3 salt=c520b38f1057e5bef0aa64c00cd0d2e50662e22bf19771278921f90a35fd616d" vt.global_cursor_default=0
 
 label kernel-4.4-ro
     kernel /dts/Image-${version}

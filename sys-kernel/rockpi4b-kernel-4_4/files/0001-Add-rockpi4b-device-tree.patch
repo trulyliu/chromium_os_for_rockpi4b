@@ -1,7 +1,7 @@
-From dcd0075f9568415e33fdad97667271bbd2230328 Mon Sep 17 00:00:00 2001
+From cc341b3268451c2cb35460e983f0fd5a8cd383c7 Mon Sep 17 00:00:00 2001
 From: trulyliu <trulyliu@gmail.com>
 Date: Wed, 27 Mar 2019 11:05:12 +0800
-Subject: [PATCH] Add rockpi4b device tree
+Subject: [PATCH 1/2] Add rockpi4b device tree
 
 Change-Id: I87d8b2c95c99148b3343262bf7770435e979fb7e
 ---
