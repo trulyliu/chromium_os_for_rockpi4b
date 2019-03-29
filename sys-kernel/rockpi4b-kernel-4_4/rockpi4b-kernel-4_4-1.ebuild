@@ -20,6 +20,9 @@ RDEPEND="${DEPEND}"
 # TODO: Allow different versions for different CHROMEOS_KERNEL_SPLITCONFIGs
 AFDO_PROFILE_VERSION="R74-11803.0-1551697383"
 
+# Put it here insread of make.conf to avoid chromeos-kernel-4_4 fail to compile
+# CHROMEOS_KERNEL_CONFIG="/mnt/host/source/src/overlays/overlay-rockpi4b/sys-kernel/rockpi4b-kernel-4_4/files/rockpi_defconfig"
+
 EPATCH_SOURCE=${FILESDIR}
 
 # This must be inherited *after* EGIT/CROS_WORKON variables defined
